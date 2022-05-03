@@ -1,14 +1,8 @@
 import { Routes, Route, Outlet } from "react-router-dom";
 import Navigation from "./components/routes/navigation/navigation.component";
 import Home from "./components/routes/home/home.component";
-import SignIn from "./components/routes/sign-in/sign-in.component";
-const Shop = () => {
-  return (
-    <div>
-      <h1>fghjk</h1>
-    </div>
-  );
-};
+import Authentication from "./components/routes/authentication/authentication.component";
+import Shop from "./components/routes/shop/shop.component";
 
 const App = () => {
   return (
@@ -16,7 +10,7 @@ const App = () => {
       <Route path="/" element={<Navigation />}>
         <Route index element={<Home />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/auth" element={<Authentication />} />
       </Route>
     </Routes>
   );
